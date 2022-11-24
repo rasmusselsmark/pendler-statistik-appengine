@@ -1,2 +1,2 @@
-webapp3
+Flask==2.1.0
 websocket-client

@@ -1,0 +1,51 @@
+<!doctype html>
+<!--
+ Copyright 2021 Google LLC
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+      http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<html>
+<head>
+  <title>Tog</title>
+</head>
+<body>
+  <table border=1>
+    <thead>
+      <th>id</th>
+      <th>unique_id</th>
+      <th>destination</th>
+      <th>scheduled_time</th>
+      <th>is_cancelled</th>
+      <th>estimated_departure_time</th>
+      <th>delay_time</th>
+      <th>delay</th>
+      <th>track_current</th>
+      <th>track_original</th>
+    </thead>
+    <tbody>
+    {% for train in trains %}
+      <tr>
+        <td>{{ train.id }}</td>
+        <td>{{ train.unique_id }}</td>
+        <td>{{ train.destination }}</td>
+        <td>{{ train.scheduled_time }}</td>
+        <td>{{ train.is_cancelled }}</td>
+        <td>{{ train.estimated_departure_time }}</td>
+        <td>{{ train.delay_time }}</td>
+        <td>{{ train.delay }}</td>
+        <td>{{ train.track_current }}</td>
+        <td>{{ train.track_original }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>
